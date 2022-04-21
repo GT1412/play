@@ -1,0 +1,10 @@
+---
+- name: Apache webserver
+  hosts: all
+  become: yes
+  remote_user: root
+  tasks:
+         - name: installing apache2
+           yum:
+              name: httpd
+              state: latest
